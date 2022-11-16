@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Baking Blog</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" href="./css/style.css"> -->
+</head>
+
+<body>
+	<header>
+		<img class="logo" src="./img/logo.jpeg">
+		<h1 class="title">Baking Blog</h1>
+		<button onclick="colorMode()" class="colorMode">Change Color Mode</button>
+		<script type="module">
+			import { colorMode } from './build/main.js'
+			window.colorMode = colorMode;
+		</script>
+		<button onclick="createEntry()" class="colorMode">New Entry</button>
+	</header>
+	<div>
+		<h2>Welcome to the Baking Blog</h2>
+	</div>
+	<div>
+		<ul>
+			<section class="container">
+				<p>Entry</p>
+				<button class="delete">Delete</button>
+				<button class="edit">Edit</button>
+			</section>
+		</ul>
+	</div>
+</body>
+
+<script>
+
+</script>
+<!DOCTYPE html>

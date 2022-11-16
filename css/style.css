@@ -1,0 +1,100 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: "Raleway";
+}
+
+header{
+    display: flex;
+}
+
+nav{
+    background-color: grey;
+    height: 20px;
+    margin-top: 5px;
+}
+
+.logo{
+    align-self: left;
+    height: 75px;
+}
+
+.title{
+    text-align: center;
+    padding-left: 100px;
+    flex-basis: 70%;
+}
+
+.colorMode{
+    float: right;
+    text-align: center;
+    margin-left: auto;
+    margin-top: 30px;
+    padding-left: 10px;
+    height: auto;
+    font-size: 17px;
+    background-color: #D3A03B;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+h3 {
+    text-align: right;
+}
+
+h4 {
+    text-align: center;
+    font-size: larger;
+}
+h5 {
+    text-align: center;
+    font-size: large;
+    text-decoration: underline;
+}
+
+.text{
+    flex-direction: column;
+}
+
+p{
+    padding: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+section{
+    background-color: #D3A03B;
+    border-radius: 20px;
+}
+
+a{
+    color:842E1A;
+    font-weight: bold;
+    padding-left: 100px;
+}
+
+.code{
+    background-color:#1d1d1d ; 
+    color: #FFFFFF;
+    padding: 7px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+code{
+    padding: 2px;
+    color: #FFFFFF;
+}

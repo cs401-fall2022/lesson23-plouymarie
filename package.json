@@ -1,0 +1,23 @@
+{
+  "name": "lesson23-plouymarie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cs401-fall2022/lesson23-plouymarie.git"
+  },
+  "author": "Marie Plouy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cs401-fall2022/lesson23-plouymarie/issues"
+  },
+  "homepage": "https://cs401-fall2022.github.io/lesson23-plouymarie/",
+  "dependencies": {
+    "sqlite3": "^5.1.2"
+  }
+}
