@@ -14,4 +14,14 @@ function colorMode() {
         }
     }
 }
-export { hello, colorMode };
+
+function createEntry() {
+    document.getElementById("form").style.display = "block";
+  }
+  
+  function submitEntry() {
+    document.getElementById("form").style.display = "none";
+  }
+  
+
+export { hello, colorMode, submitEntry, createEntry };

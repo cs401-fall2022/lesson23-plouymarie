@@ -18,6 +18,7 @@
   },
   "homepage": "https://cs401-fall2022.github.io/lesson23-plouymarie/",
   "dependencies": {
+    "npm": "^9.1.2",
     "sqlite3": "^5.1.2"
   }
 }
