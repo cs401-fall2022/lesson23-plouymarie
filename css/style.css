@@ -1,4 +1,4 @@
-/* body {
+body {
     background-color: black;
     color: white;
     font-family: "Raleway";
@@ -29,13 +29,15 @@ nav{
     float: right;
     text-align: center;
     margin-left: auto;
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-right: 10px;
     padding-left: 10px;
     height: auto;
     font-size: 17px;
     background-color: #D3A03B;
     color: white;
     border-radius: 5px;
+    min-width: 105px;
 }
 
 button:hover{
@@ -58,7 +60,9 @@ h3 {
 h4 {
     text-align: center;
     font-size: larger;
+    padding: 20px;
 }
+
 h5 {
     text-align: center;
     font-size: large;
@@ -70,13 +74,15 @@ h5 {
 }
 
 p{
-    padding: 20px;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    margin: 10px;
+    font-size: larger;
 }
 
 section{
-    background-color: #D3A03B;
+    background-color: #842E1A;
     border-radius: 20px;
 }
 
@@ -87,18 +93,38 @@ a{
     text-decoration: none;
 }
 
-.code{
-    background-color:#1d1d1d ; 
-    color: #FFFFFF;
-    padding: 7px;
-    border-radius: 10px;
-    margin: 10px;
+.buttons{
+    display: flex;
+    padding: 10px;
+    align-self: left;
+    margin-left: 30px;
+    margin-right: 20px;
 }
 
-code{
-    padding: 2px;
-    color: #FFFFFF;
-} */
+.delete{
+    float: left;
+    text-align: center;
+    margin-top: 30px;
+    /* padding-left: 10px; */
+    height: auto;
+    font-size: 17px;
+    background-color: #D3A03B;
+    color: black;
+    border-radius: 5px;
+}
+
+.edit{
+    float: right;
+    text-align: center;
+    margin-left: auto;
+    margin-top: 30px;
+    margin-right: 10px;
+    height: auto;
+    font-size: 17px;
+    background-color: #D3A03B;
+    color: black;
+    border-radius: 5px;
+}
 
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {

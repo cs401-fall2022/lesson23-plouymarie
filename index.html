@@ -21,9 +21,7 @@
 		<!-- <img class="logo" src="./img/logo.jpeg"> -->
 		<h1 class="title">Baking Blog</h1>
 		<button onclick="colorMode()" class="colorMode">Change Color Mode</button>
-		<button onclick="createEntry()" class="colorMode">
-			<a style="text-decoration:none; color:black">New Entry </a>
-		</button>
+		<button onclick="createEntry()" class="colorMode"> New Entry </button>
 	</header>
 	<div>
 		<h2>Welcome to the Baking Blog</h2>
@@ -38,7 +36,7 @@
 				<label for="blogImg" class="blogImg">Add Photo: </label>
 				<input type="file" id="blogImg" name="blogImg"><br>
 				<button class="submitBtn" onclick="submitEntry()">
-					<a tyle="text-decoration:none; color:black"> Submit </a>
+					<a> Submit </a>
 				</button>
 			</form>
 		</div>
@@ -46,11 +44,27 @@
 			<ul>
 				<section class="container">
 					<script>
-						
+						const sqlite3 = require('sqlite3').verbose();
+						// open the database
+						let db = new sqlite3.Database('./db/chinook.db');
+						db.all("SELECT * FROM blog ORDER BY date",
+							(error, rows) => {
+								if (err) {throw err;}
+								rows.forEach( row => {echo(`Title: ${ row.title}`);})
+
+							});
+						db.close();
 					</script>
-					<p>Entry</p>
-					<button class="delete">Delete</button>
-					<button class="edit">Edit</button>
+					<h4><Script>
+						echo(title[i]);
+					</Script></h4>
+					<h4><Script>
+						echo(entry[i]);
+					</Script></h4>
+					<div class="buttons">
+						<button onclick="deleteEntry()" class="delete">Delete</button>
+						<button onclick="editEntry()" class="edit">Edit</button>
+					</div>
 				</section>
 			</ul>
 		</div>
