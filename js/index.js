@@ -17,11 +17,18 @@ function colorMode() {
 
 function createEntry() {
     document.getElementById("form").style.display = "block";
-  }
-  
-  function submitEntry() {
-    document.getElementById("form").style.display = "none";
-  }
-  
+}
 
-export { hello, colorMode, submitEntry, createEntry };
+function submitEntry() {
+    
+}
+
+function popupConfirmation() {
+    document.getElementById("popup").style.display = "block";
+}
+
+function cancel() {
+    document.getElementById("form").style.display = "none";
+}
+
+export { hello, colorMode, submitEntry, createEntry, cancel, popupConfirmation };

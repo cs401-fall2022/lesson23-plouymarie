@@ -9,10 +9,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="./css/style.css">
 	<script type="module">
-		import { colorMode, createEntry, submitEntry } from './js/index.js'
+		import { colorMode, createEntry, submitEntry, cancel, popupConfirmation } from './js/index.js'
 		window.colorMode = colorMode;
 		window.createEntry = createEntry;
 		window.submitEntry = submitEntry;
+		window.cancel = cancel;
+		window.popupConfirmation = popupConfirmation;
 	</script>
 </head>
 
@@ -33,10 +35,14 @@
 				<input type="text" placeholder="Title" id="blogTitle" name="blogTitle" required><br>
 				<label for="blogEntry" class="blogEntry">Entry: </label><br>
 				<textarea type="text"  placeholder="Blog Entry" id="blogEntry" name="blogEntry" required></textarea><br>
-				<label for="blogImg" class="blogImg">Add Photo: </label>
-				<input type="file" id="blogImg" name="blogImg"><br>
+				<!--implement image saving in database -->
+				<!-- <label for="blogImg" class="blogImg">Add Photo: </label>
+				<input type="file" id="blogImg" name="blogImg"><br> -->
 				<button class="submitBtn" onclick="submitEntry()">
 					<a> Submit </a>
+				</button>
+				<button class="cancelBtn" onclick="cancel()">
+					<a> Cancel </a>
 				</button>
 			</form>
 		</div>
@@ -50,8 +56,7 @@
 						db.all("SELECT * FROM blog ORDER BY date",
 							(error, rows) => {
 								if (err) {throw err;}
-								rows.forEach( row => {echo(`Title: ${ row.title}`);})
-
+								rows.forEach( row => {document.write(`Title: ${ row.title}`);})
 							});
 						db.close();
 					</script>
@@ -62,7 +67,16 @@
 						echo(entry[i]);
 					</Script></h4>
 					<div class="buttons">
-						<button onclick="deleteEntry()" class="delete">Delete</button>
+						<button onclick="popupConfirmation()" class="delete">Delete</button>
+							<div class="popup" id="popup">
+								<form class="popup-container">
+									<label class="deleteOpt">Are you sure you want to delete this Entry?</label><br>
+									<div class="buttons">
+										<button class="yesBtn" onclick="deleteEntry()"> Yes </button>
+										<button class="noBtn" onclick="cancel()"> No </button>
+									</div>
+								</form>
+							</div>
 						<button onclick="editEntry()" class="edit">Edit</button>
 					</div>
 				</section>
