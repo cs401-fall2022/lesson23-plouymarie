@@ -14,9 +14,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
-app.use('/createEntry', createRouter);
-app.use('/editEntry', updateRouter);
-app.use('/deleteEntry', deleteRouter);
+app.use('/create', createRouter);
+app.use('/edit', updateRouter);
+app.use('/delete', deleteRouter);
 
 // register liquid engine
 app.engine('liquid', engine.express()); 

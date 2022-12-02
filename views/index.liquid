@@ -12,8 +12,8 @@
 
   <body>
     <header>
-      <h1 class="title">
-        <a href="/">{{title}}</a>
+      <h1>
+        <a href="/" class="title">Cat Blog</a>
       </h1>
     </header>
     <div>
@@ -22,16 +22,16 @@
     <div class="flexBox">
       <nav>
         <ul>
-          <li><a href="createEntry">New Entry</a></li>
-          <li><a href="editEntry">Edit Entry</a></li>
-          <li><a href="deleteEntry">Delete Entry</a></li>
+          <li><a href="create">New Entry</a></li>
+          <li><a href="edit">Edit Entry</a></li>
+          <li><a href="delete">Delete Entry</a></li>
         </ul>
       </nav>
       <div class="entries">
         <ul>
           {% for txt in data%}
             <section class="container">
-              <h4>Blog{{txt.id}}: {{txt.title}}</h4>
+              <h4>Cat {{txt.id}}: {{txt.title}}</h4>
               <p>{{txt.entry}}</p>
             </section>
           {% endfor%}

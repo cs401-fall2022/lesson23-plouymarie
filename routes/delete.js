@@ -6,7 +6,7 @@ router.get('/', function (req, res, next) {
     res.render('delete', {title:'Delete'});
 });
 
-router.post('/delete', (req, res, next) => {
+router.post('/', (req, res, next) => {
     var db = new sqlite3.Database('catBlog.sqlite3', sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE,
         (err) => {
             if (err) {

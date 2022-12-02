@@ -12,7 +12,9 @@
 
   <body>
     <header>
-      <h1 class="title">Cat Blog</h1>
+      <h1>
+        <a href="/" class="title">Cat Blog</a>
+      </h1>
     </header>
     <div>
       <h2>{{title}}</h2>
@@ -20,22 +22,19 @@
     <div class="flexBox">
       <nav>
         <ul>
-          <li><a href="createEntry">New Entry</a></li>
-          <li><a href="editEntry">Edit Entry</a></li>
-          <li><a href="deleteEntry">Delete Entry</a></li>
+          <li><a href="create">New Entry</a></li>
+          <li><a href="edit">Edit Entry</a></li>
+          <li><a href="delete">Delete Entry</a></li>
         </ul>
       </nav>
       <div class="form-popup" id="form">
-        <form class="form-container" action="/add" method="post">
-          <h2>Delete Entry</h2>
-          <label for="blogId" id="blogId" name="blogId">
-            Entry to Delete (id#):
+        <form class="form-container" action="/delete" method="POST">
+          <label for="blogId" id="blogId" name="blogId" class="blogTitle">
+            Entry to Delete (cat#):
           </label>
-          <input type="text" placeholder="ID#" id="blogId" name="blogId" required><br>
-          <button type="submit">
-            <a>
-              DELETE!
-            </a>
+          <input type="text" placeholder="Cat#" id="blogId" name="blogId" required><br>
+          <button class="submitBtn" type="submit">
+            DELETE!
           </button>
         </form>
       </div>

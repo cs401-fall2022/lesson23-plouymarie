@@ -13,10 +13,8 @@ router.post('/', (req, res, next) => {
                 console.log("Getting error " + err);
                 exit(1);
             }
-            console.log("inserting " + req.body.blogTitle + " " + req.body.blogEntry);
-            db.exec(`INSERT INTO catBlog (title, entry, img)
-                values ('${req.body.blogTitle}', '${req.body.blogEntry}', '${req.body.blogEntry}');`)
-            //redirect to homepage
+            console.log("updating " + req.body.blogTitle + " " + req.body.blogEntry);
+            db.run("UPDATE catBlog SET title = ?, entry = ? WHERE id = ? ", [req.body.blogTitle, req.body.blogEntry, req.body.blogId]);
             res.redirect('/');
         }
     );

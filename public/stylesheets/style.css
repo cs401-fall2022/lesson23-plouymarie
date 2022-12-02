@@ -1,7 +1,7 @@
 body {
   background-color: black;
   color: white;
-  font-family: "Raleway";
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 header{
@@ -11,8 +11,16 @@ header{
 nav{
   background-color: rgb(34, 34, 34);
   max-height: 90px;
-  margin-top: 40px;
+  margin-top: 60px;
   padding-right: 20px;
+  color: #086292;
+  min-width: 130px;
+  margin-left: 20px;
+}
+
+.title{
+  color:#97c2da;
+  
 }
 
 ul{
@@ -61,6 +69,14 @@ h3 {
   flex-basis: 80%;
 }
 
+.blogTitle{
+  padding-right: 10px;
+}
+.blogImg{
+  padding-right: 10px;
+  padding-bottom: 20px;
+}
+
 h4 {
   text-align: center;
   font-size: larger;
@@ -91,9 +107,9 @@ section{
 }
 
 a{
-  color: aquamarine;
   font-weight: bold;
   text-decoration: none;
+  color: #086292;
 }
 
 .buttons{
@@ -105,51 +121,21 @@ a{
   color: white;
 }
 
-.delete{
-  float: left;
-  text-align: center;
-  margin-top: 30px;
-  height: 30px;
-  font-size: 17px;
-  background-color: #D3A03B;
-  color: black;
-  border-radius: 5px;
-  border: none;
-  max-height: 30px;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-weight: bold;
-}
-
-.edit{
-  float: right;
-  text-align: center;
-  margin-left: auto;
-  margin-top: 30px;
-  margin-right: 10px;
-  height: auto;
-  font-size: 17px;
-  background-color: #D3A03B;
-  color: black;
-  border-radius: 5px;
-  border: none;
-  max-height: 30px;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-weight: bold;
-}
-
 .form-popup {
   display: block;
   bottom: 0;
   right: 15px;
-  border: 3px solid #85621e;
+  border: 3px solid #093c57;
+  border-radius: 5px;
+  background-color: #086292;
+  min-width: 75%;
+  margin: 5%;
 }
 
 .form-container {
+  min-width: 75%;
   max-width: auto;
   padding: 10px;
-  background-color: #D3A03B;
 }
 
 .form-container input[type=text]{
@@ -157,30 +143,25 @@ a{
   padding: 10px;
   margin: 5px 0 22px 0;
   border: none;
-  background: #f1f1f1;
+  background: #97c2da;
 }
 .form-container textarea[type=text] {
   width: 90%;
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
-  background: #f1f1f1;
+  background-color: #97c2da;
 }
 
 .form-container input[type=text]:focus,
 .form-container textarea[type=text] {
-  background-color: #ddd;
+  background-color: #97c2da;
   outline: none;
-}
-
-.form-container input[type="file"]{
-  padding-bottom: 20px;
 }
 
 .form-container .submitBtn {
   background-color: #4e4e4e;
   border-radius: 5px;
-  text-decoration-color: white;
   padding: 16px 20px;
   border: none;
   cursor: pointer;
@@ -203,53 +184,22 @@ a{
 .submitBtn{
   justify-self: right;
   align-self: right;
+  color: #95acb8;
+}
+
+
+.submitBtn .cancelBtn a{
+  color: white;
+}
+
+.cancelBtn{
+  justify-self: right;
+  align-self: right;
+  color: black;
 }
 
 .form-container .submitBtn:hover,
 .cancelBtn:hover {
   transform: scale(1.05);
   font-size: 18px;
-}
-
-.popup{
-  bottom: 0;
-  right: 15px;
-  margin: 15px;
-}
-
-.popup-container {
-  max-width: auto;
-  padding: 10px;
-  background-color: #D3A03B;
-  color: black;
-  font-weight: bold;
-}
-
-.popup-container input[type="file"]{
-  padding-bottom: 20px;
-}
-
-.popup-container .yesBtn {
-  background-color: #4e4e4e;
-  border-radius: 5px;
-  color: white;
-  border: none;
-  cursor: pointer;
-  width: 25%;
-  margin-right: 15px;
-  float: right;
-  height: 30px;
-  max-height: 30px;
-}
-
-.popup-container .noBtn {
-  background-color: rgb(131, 131, 131);
-  border-radius: 5px;
-  color: white;
-  border: none;
-  cursor: pointer;
-  width: 25%;
-  text-align: center;
-  max-height: 30px;
-  float:left;
 }

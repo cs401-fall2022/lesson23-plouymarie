@@ -7,7 +7,7 @@ router.get('/', (req, res, next) => {
     res.render('create', { title: 'Create New Entry' });
 });
 
-router.post('/create', (req, res, next) => {
+router.post('/', (req, res, next) => {
     var db = new sqlite3.Database('catBlog.sqlite3', sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE,
         (err) => {
             if (err) {
@@ -16,7 +16,7 @@ router.post('/create', (req, res, next) => {
             }
             console.log("inserting " + req.body.blogTitle + " " + req.body.blogEntry);
             db.exec(`INSERT INTO catBlog (title, entry, img)
-                values ('${req.body.blogTitle}', '${req.body.blogEntry}', '${req.body.blogEntry}');`)
+                values ('${req.body.blogTitle}', '${req.body.blogEntry}', '${req.body.blogImg}');`);
             res.redirect('/');
         }
     );

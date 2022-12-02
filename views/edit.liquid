@@ -12,7 +12,9 @@
 
   <body>
     <header>
-      <h1 class="title">Cat Blog</h1>
+      <h1>
+        <a href="/" class="title">Cat Blog</a>
+      </h1>
     </header>
     <div>
       <h2>{{title}}</h2>
@@ -20,27 +22,31 @@
     <div class="flexBox">
       <nav>
         <ul>
-          <li><a href="createEntry">New Entry</a></li>
-          <li><a href="editEntry">Edit Entry</a></li>
-          <li><a href="deleteEntry">Delete Entry</a></li>
+          <li><a href="create">New Entry</a></li>
+          <li><a href="edit">Edit Entry</a></li>
+          <li><a href="delete">Delete Entry</a></li>
         </ul>
       </nav>
       <div class="form-popup" id="form">
-        <form class="form-container" action="/add" method="post">
-          <h2>Create New Entry</h2>
-          <label for="blogEntry" class="blogTitle">Title:
+        <form class="form-container" action="/edit" method="POST">
+          <label for="blogId" id="blogId" name="blogId" class="blogTitle">
+            Entry to Edit (cat#):
           </label>
-          <input type="text" placeholder="Title" id="blogTitle" name="blogTitle" required><br>
-          <label for="blogEntry" class="blogEntry">Entry:
+          <input type="text" placeholder="Cat#" id="blogId" name="blogId" required><br>
+          <label for="blogTitle" class="blogTitle">Title:
+          </label>
+          <input type="text" placeholder="Title" id="blogId" name="blogTitle" required><br>
+          <label for="blogEntry" class="blogEntry">Edit Entry:
           </label><br>
-          <textarea type="text" placeholder="Tell us about your cat" id="blogEntry" name="blogEntry" required></textarea><br>
-          <button class="submitBtn" type="submit">
-            <a>
-              Submit
-            </a>
+          <textarea type="text" placeholder="Tell us more about your cat" id="blogEntry" name="blogEntry" required></textarea><br>
+          <label for="blogImg" class="blogImg">Add Photo:
+          </label>
+          <input type="file" id="blogImg" name="blogImg" class="blogImg"><br>
+          <button class="submitBtn" type="submit" style="color:#95acb8">
+            Edit
           </button>
           <button class="cancelBtn">
-            <a href="/">
+            <a href="./" style="color:#086292">
               cancel
             </a>
           </button>
