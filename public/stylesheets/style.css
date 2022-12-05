@@ -6,6 +6,13 @@ body {
 
 header{
   align-self: center;
+  display: flex;
+}
+
+.logo{
+  max-width: 100px;
+  flex-basis: 20%;
+  margin-left: 4%;
 }
 
 nav{
@@ -20,7 +27,11 @@ nav{
 
 .title{
   color:#97c2da;
-  
+  flex-basis: 80%;
+  text-align: center;
+  align-self: center;
+  -webkit-align-items: center; 
+  align-items: center; 
 }
 
 ul{
