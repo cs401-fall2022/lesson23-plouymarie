@@ -3,7 +3,7 @@ var path = require('path');
 var { Liquid } = require('liquidjs');
 var engine = new Liquid();
 
-var indexRouter = require('./index');
+var indexRouter = require('./routes/index');
 var createRouter = require('./routes/create');
 var updateRouter = require('./routes/edit');
 var deleteRouter = require('./routes/delete');
