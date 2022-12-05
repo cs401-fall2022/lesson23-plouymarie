@@ -1,7 +1,8 @@
-# github-classroom-blank-starter
+# Cat Blog
 
+This Website is a blog about my cats. 
 
-To run: 
+## To run: 
 
 ``` console 
 $ npm install

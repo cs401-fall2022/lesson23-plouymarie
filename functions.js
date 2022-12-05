@@ -16,4 +16,4 @@ function colorMode() {
     }
 }
 
-export { hello, colorMode, createEntry, submitEntry, cancel, popupConfirmation, editEntry, deleteEntry }
+export { hello, colorMode}
